@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Battleship</title>
+    <style></style>
+    <link rel="stylesheet" href = 'Battleship.CSS'>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <p style='text-align: center; font-weight:bold;' id="userTitle">Your Fleet</p>
+        <p style='text-align: center; font-weight:bold;' id="opponentTitle">Opponent's Fleet</p>
+        <table id="userBoard">
+            <tr>
+                <td id = '100'></td>
+                <td id = '101'></td>
+                <td id = '102'></td>
+                <td id = '103'></td>
+                <td id = '104'></td>
+                <td id = '105'></td>
+                <td id = '106'></td>
+                <td id = '107'></td>
+                <td id = '108'></td>
+                <td id = '109'></td>
+            </tr>
+            <tr>
+                <td id = '110'></td>
+                <td id = '111'></td>
+                <td id = '112'></td>
+                <td id = '113'></td>
+                <td id = '114'></td>
+                <td id = '115'></td>
+                <td id = '116'></td>
+                <td id = '117'></td>
+                <td id = '118'></td>
+                <td id = '119'></td>
+            </tr>
+            <tr>
+                <td id = '120'></td>
+                <td id = '121'></td>
+                <td id = '122'></td>
+                <td id = '123'></td>
+                <td id = '124'></td>
+                <td id = '125'></td>
+                <td id = '126'></td>
+                <td id = '127'></td>
+                <td id = '128'></td>
+                <td id = '129'></td>
+            </tr>
+            <tr>
+                <td id = '130'></td>
+                <td id = '131'></td>
+                <td id = '132'></td>
+                <td id = '133'></td>
+                <td id = '134'></td>
+                <td id = '135'></td>
+                <td id = '136'></td>
+                <td id = '137'></td>
+                <td id = '138'></td>
+                <td id = '139'></td>
+            </tr>
+            <tr>
+                <td id = '140'></td>
+                <td id = '141'></td>
+                <td id = '142'></td>
+                <td id = '143'></td>
+                <td id = '144'></td>
+                <td id = '145'></td>
+                <td id = '146'></td>
+                <td id = '147'></td>
+                <td id = '148'></td>
+                <td id = '149'></td>
+            </tr>
+            <tr>
+                <td id = '150'></td>
+                <td id = '151'></td>
+                <td id = '152'></td>
+                <td id = '153'></td>
+                <td id = '154'></td>
+                <td id = '155'></td>
+                <td id = '156'></td>
+                <td id = '157'></td>
+                <td id = '158'></td>
+                <td id = '159'></td>
+            </tr>
+            <tr>
+                <td id = '160'></td>
+                <td id = '161'></td>
+                <td id = '162'></td>
+                <td id = '163'></td>
+                <td id = '164'></td>
+                <td id = '165'></td>
+                <td id = '166'></td>
+                <td id = '167'></td>
+                <td id = '168'></td>
+                <td id = '169'></td>
+            </tr>
+            <tr>
+                <td id = '170'></td>
+                <td id = '171'></td>
+                <td id = '172'></td>
+                <td id = '173'></td>
+                <td id = '174'></td>
+                <td id = '175'></td>
+                <td id = '176'></td>
+                <td id = '177'></td>
+                <td id = '178'></td>
+                <td id = '179'></td>
+            </tr>
+            <tr>
+                <td id = '180'></td>
+                <td id = '181'></td>
+                <td id = '182'></td>
+                <td id = '183'></td>
+                <td id = '184'></td>
+                <td id = '185'></td>
+                <td id = '186'></td>
+                <td id = '187'></td>
+                <td id = '188'></td>
+                <td id = '189'></td>
+            </tr>
+            <tr>
+                <td id = '190'></td>
+                <td id = '191'></td>
+                <td id = '192'></td>
+                <td id = '193'></td>
+                <td id = '194'></td>
+                <td id = '195'></td>
+                <td id = '196'></td>
+                <td id = '197'></td>
+                <td id = '198'></td>
+                <td id = '199'></td>
+            </tr>
+        </table>
+        <table id="enemyBoard">
+            <tr>
+                <td id = '0' onClick = 'Shoot(id)'></td>
+                <td id = '1' onClick = 'Shoot(id)'></td>
+                <td id = '2' onClick = 'Shoot(id)'></td>
+                <td id = '3' onClick = 'Shoot(id)'></td>
+                <td id = '4' onClick = 'Shoot(id)'></td>
+                <td id = '5' onClick = 'Shoot(id)'></td>
+                <td id = '6' onClick = 'Shoot(id)'></td>
+                <td id = '7' onClick = 'Shoot(id)'></td>
+                <td id = '8' onClick = 'Shoot(id)'></td>
+                <td id = '9' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '10' onClick = 'Shoot(id)'></td>
+                <td id = '11' onClick = 'Shoot(id)'></td>
+                <td id = '12' onClick = 'Shoot(id)'></td>
+                <td id = '13' onClick = 'Shoot(id)'></td>
+                <td id = '14' onClick = 'Shoot(id)'></td>
+                <td id = '15' onClick = 'Shoot(id)'></td>
+                <td id = '16' onClick = 'Shoot(id)'></td>
+                <td id = '17' onClick = 'Shoot(id)'></td>
+                <td id = '18' onClick = 'Shoot(id)'></td>
+                <td id = '19' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '20' onClick = 'Shoot(id)'></td>
+                <td id = '21' onClick = 'Shoot(id)'></td>
+                <td id = '22' onClick = 'Shoot(id)'></td>
+                <td id = '23' onClick = 'Shoot(id)'></td>
+                <td id = '24' onClick = 'Shoot(id)'></td>
+                <td id = '25' onClick = 'Shoot(id)'></td>
+                <td id = '26' onClick = 'Shoot(id)'></td>
+                <td id = '27' onClick = 'Shoot(id)'></td>
+                <td id = '28' onClick = 'Shoot(id)'></td>
+                <td id = '29' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '30' onClick = 'Shoot(id)'></td>
+                <td id = '31' onClick = 'Shoot(id)'></td>
+                <td id = '32' onClick = 'Shoot(id)'></td>
+                <td id = '33' onClick = 'Shoot(id)'></td>
+                <td id = '34' onClick = 'Shoot(id)'></td>
+                <td id = '35' onClick = 'Shoot(id)'></td>
+                <td id = '36' onClick = 'Shoot(id)'></td>
+                <td id = '37' onClick = 'Shoot(id)'></td>
+                <td id = '38' onClick = 'Shoot(id)'></td>
+                <td id = '39' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '40' onClick = 'Shoot(id)'></td>
+                <td id = '41' onClick = 'Shoot(id)'></td>
+                <td id = '42' onClick = 'Shoot(id)'></td>
+                <td id = '43' onClick = 'Shoot(id)'></td>
+                <td id = '44' onClick = 'Shoot(id)'></td>
+                <td id = '45' onClick = 'Shoot(id)'></td>
+                <td id = '46' onClick = 'Shoot(id)'></td>
+                <td id = '47' onClick = 'Shoot(id)'></td>
+                <td id = '48' onClick = 'Shoot(id)'></td>
+                <td id = '49' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '50' onClick = 'Shoot(id)'></td>
+                <td id = '51' onClick = 'Shoot(id)'></td>
+                <td id = '52' onClick = 'Shoot(id)'></td>
+                <td id = '53' onClick = 'Shoot(id)'></td>
+                <td id = '54' onClick = 'Shoot(id)'></td>
+                <td id = '55' onClick = 'Shoot(id)'></td>
+                <td id = '56' onClick = 'Shoot(id)'></td>
+                <td id = '57' onClick = 'Shoot(id)'></td>
+                <td id = '58' onClick = 'Shoot(id)'></td>
+                <td id = '59' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '60' onClick = 'Shoot(id)'></td>
+                <td id = '61' onClick = 'Shoot(id)'></td>
+                <td id = '62' onClick = 'Shoot(id)'></td>
+                <td id = '63' onClick = 'Shoot(id)'></td>
+                <td id = '64' onClick = 'Shoot(id)'></td>
+                <td id = '65' onClick = 'Shoot(id)'></td>
+                <td id = '66' onClick = 'Shoot(id)'></td>
+                <td id = '67' onClick = 'Shoot(id)'></td>
+                <td id = '68' onClick = 'Shoot(id)'></td>
+                <td id = '69' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '70' onClick = 'Shoot(id)'></td>
+                <td id = '71' onClick = 'Shoot(id)'></td>
+                <td id = '72' onClick = 'Shoot(id)'></td>
+                <td id = '73' onClick = 'Shoot(id)'></td>
+                <td id = '74' onClick = 'Shoot(id)'></td>
+                <td id = '75' onClick = 'Shoot(id)'></td>
+                <td id = '76' onClick = 'Shoot(id)'></td>
+                <td id = '77' onClick = 'Shoot(id)'></td>
+                <td id = '78' onClick = 'Shoot(id)'></td>
+                <td id = '79' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '80' onClick = 'Shoot(id)'></td>
+                <td id = '81' onClick = 'Shoot(id)'></td>
+                <td id = '82' onClick = 'Shoot(id)'></td>
+                <td id = '83' onClick = 'Shoot(id)'></td>
+                <td id = '84' onClick = 'Shoot(id)'></td>
+                <td id = '85' onClick = 'Shoot(id)'></td>
+                <td id = '86' onClick = 'Shoot(id)'></td>
+                <td id = '87' onClick = 'Shoot(id)'></td>
+                <td id = '88' onClick = 'Shoot(id)'></td>
+                <td id = '89' onClick = 'Shoot(id)'></td>
+            </tr>
+            <tr>
+                <td id = '90' onClick = 'Shoot(id)'></td>
+                <td id = '91' onClick = 'Shoot(id)'></td>
+                <td id = '92' onClick = 'Shoot(id)'></td>
+                <td id = '93' onClick = 'Shoot(id)'></td>
+                <td id = '94' onClick = 'Shoot(id)'></td>
+                <td id = '95' onClick = 'Shoot(id)'></td>
+                <td id = '96' onClick = 'Shoot(id)'></td>
+                <td id = '97' onClick = 'Shoot(id)'></td>
+                <td id = '98' onClick = 'Shoot(id)'></td>
+                <td id = '99' onClick = 'Shoot(id)'></td>
+            </tr>
+        </table>
+        <div id = 'describer'>
+            <h1 style="text-align:center;">Last Attempt</h1>
+            <h3 style="text-align:center;" id = 'describerID'></h3>
+        </div>
+        <table style="text-align: center;" id= 'info'>
+            <tr>
+                <td style="background-color:white; font-weight:bold; border:none;">Color Information</td>
+            </tr>
+            <tr>
+                <td style="background-color:white; width:260px">Open Space</td>
+                <td style="background-color: lightblue;"></td>
+            </tr>
+            <tr>
+                <td style="background-color:white; width:260px">Current Spot</td>
+                <td style="background-color: blue;"></td>
+            </tr>
+            <tr>
+                <td style="background-color:white;">Miss</td>
+                <td style="background-color:black;"></td>
+            </tr>
+            <tr>
+                <td style="background-color:white;">Hit</td>
+                <td style="background-color: red;"></td>
+            </tr>
+            <tr>
+                <td style="background-color:white;">Sunk</td>
+                <td style="background-color: darkred;"
+            </tr>
+            <tr>
+                <td style="background-color:white;">Patrol Boat</td>
+                <td style="background-color:gray;"></td>
+            </tr>
+            <tr>
+                <td style="background-color:white;">Submarine</td>
+                <td style="background-color:darkgray;"></td>
+            </tr>
+            <tr>
+                <td style="background-color:white;">Destroyer</td>
+                <td style="background-color:steelblue;"></td>
+            </tr>
+            <tr>
+                <td style="background-color:white;">Battleship</td>
+                <td style="background-color:seagreen;"></td>
+            </tr>
+            <tr>
+                <td style="background-color:white;">Aircraft Carrier</td>
+                <td style="background-color:slategray;"></td>
+            </tr>
+        </table>
+    </div>    
+
+    <script src='Battleship.js'></script>
+
+
+</body>
+</html>
